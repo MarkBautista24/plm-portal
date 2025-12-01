@@ -16,8 +16,9 @@
     <img src="Logo.png" alt="Logo" style="width: 100%; height: 100%; object-fit: contain;">
 </div>
             <div class="logo-text">
-                <strong>Pamantasan ng</strong><br>
+                <strong>Pamantasan ng<br>
                 Lungsod ng Maynila
+                </strong>
             </div>
         </div>
         <div class="nav-menu">
@@ -252,6 +253,124 @@
                 </div>
             </div>
         </div>
+
+        <!-- Profile Page -->
+<div id="profile-page" class="page-content">
+    <div class="card">
+        <div class="card-header">
+            <h2>Profile</h2>
+        </div>
+
+        <!-- Tabs -->
+        <div class="profile-tabs">
+            <button class="tab-btn active" data-tab="profile-info">Profile</button>
+            <button class="tab-btn" data-tab="security">Security</button>
+        </div>
+
+        <!-- Student Profile Card -->
+        <div id="profile-info" class="tab-content active">
+            <div class="inner-card">
+                <h3 class="section-title">Student Profile</h3>
+
+                <div class="profile-header">
+                    <div class="profile-photo">
+                        <div class="photo-circle">
+                            <img src="profile.jpg" alt="Profile">
+                        </div>
+                    </div>
+
+                    <div class="profile-basic-info">
+                        <h2 class="student-name">Juan Dela Cruz</h2>
+                        <p class="student-course">BS Computer Science</p>
+                        <span class="student-year-badge">Year 2 • 202012345</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Personal Information Card -->
+            <div class="inner-card">
+                <h3 class="section-title">Personal Information</h3>
+
+                <div class="input-grid">
+                    <div class="input-group">
+                        <label>First Name</label>
+                        <input type="text" value="Juan" readonly>
+                    </div>
+
+                    <div class="input-group">
+                        <label>Middle Name</label>
+                        <input type="text" value="N/A" readonly>
+                    </div>
+
+                    <div class="input-group">
+                        <label>Last Name</label>
+                        <input type="text" value="Dela Cruz" readonly>
+                    </div>
+
+                    <div class="input-group full">
+                        <label>Email Address</label>
+                        <div class="input-with-icon">
+                            <span class="icon">📧</span>
+                            <input type="email" value="juandelacruz@gmail.com" readonly>
+                        </div>
+                    </div>
+
+                    <div class="input-group">
+                        <label>Date of Birth</label>
+                        <div class="input-with-icon">
+                            <span class="icon">📅</span>
+                            <input type="text" value="01/01/1999" readonly>
+                        </div>
+                    </div>
+
+                    <div class="input-group">
+                        <label>Phone Number</label>
+                        <div class="input-with-icon">
+                            <span class="icon">📞</span>
+                            <input type="text" value="+63 09991234567" readonly>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Security Tab -->
+        <div id="security" class="tab-content">
+            <div class="inner-card">
+                <h3 class="section-title">
+    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" 
+         stroke="#1e3a8a" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+         style="margin-right: 6px;">
+        <path d="M12 1l8 4v6c0 5.25-3.5 10-8 12-4.5-2-8-6.75-8-12V5l8-4z"></path>
+        <path d="M9 12l2 2 4-4"></path>
+    </svg>
+    Security Settings
+</h3>
+
+
+                <div class="input-grid">
+                    <div class="input-group full">
+                        <label>Current Password</label>
+                        <input type="password" placeholder="Enter current password">
+                    </div>
+
+                    <div class="input-group full">
+                        <label>New Password</label>
+                        <input type="password" placeholder="Enter new password">
+                    </div>
+
+                    <div class="input-group full">
+                        <label>Confirm New Password</label>
+                        <input type="password" placeholder="Confirm new password">
+                    </div>
+                </div>
+
+                <button class="submit-btn">Update Password</button>
+            </div>
+        </div>
+    </div>
+</div>
+
 
         <!-- Schedule Page -->
         <div id="schedule-page" class="page-content">
@@ -556,14 +675,16 @@
         }
 
         .sidebar {
-            width: 240px;
-            background: #0d1117;
-            padding: 0;
-            display: flex;
-            flex-direction: column;
-            height: 100vh;
-            overflow-y: auto;
-        }
+    width: 240px;
+    background: #0a1a4a; /* dark blue */
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    
+    border-radius: 0 20px 20px 0;  /* rounded right edges */
+    overflow: hidden; /* keeps rounded corners clean */
+}
 
        .submit-section {
     display: flex;
@@ -641,27 +762,33 @@
         }
 
         .nav-item {
-            display: flex;
-            align-items: center;
-            gap: 12px;
-            padding: 14px 20px;
-            color: #8b949e;
-            text-decoration: none;
-            transition: all 0.2s ease;
-            font-size: 14px;
-            cursor: pointer;
-        }
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 14px 20px;
+    color: #bfc7d5; /* slight gray-blue text */
+    text-decoration: none;
+    font-size: 14px;
+    cursor: pointer;
+    transition: 0.25s ease;
+    border-radius: 12px; /* round edges */
+    margin: 4px 10px; /* spacing around nest */
+}
 
         .nav-item:hover {
-            background: rgba(255, 255, 255, 0.05);
-            color: white;
-        }
+    background: #ffffff;
+    color: #0a1a4a;
+    border-radius: 12px; /* rounded hover too */
+}
 
         .nav-item.active {
-            background: rgba(102, 126, 234, 0.15);
-            color: white;
-            border-left: 3px solid #667eea;
-        }
+    background: #ffffff;
+    color: #0a1a4a;
+    border-left: none; /* remove old left border */
+    box-shadow: 0 2px 6px rgba(255,255,255,0.3);
+    font-weight: 600;
+    border-radius: 12px; /* rounded corners */
+}
 
         .nav-icon {
             width: 20px;
@@ -757,6 +884,7 @@
             grid-template-columns: 2fr 1fr;
             gap: 30px;
         }
+        
 
         .card {
     background: white;
@@ -818,6 +946,8 @@
             gap: 15px;
             margin-bottom: 30px;
         }
+
+        
 
         .stat-item {
             display: flex;
@@ -960,7 +1090,165 @@
 	    border: 2px solid #F1C40F; /* Friday - yellow */
 	}
 	       
+.profile-tabs {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 20px;
+}
 
+.tab-btn {
+    flex: 1;
+    padding: 10px;
+    background: #f0f0f5;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+    font-size: 14px;
+    color: #333;
+    transition: 0.2s;
+}
+
+.tab-btn.active {
+    background: #1e3a8a;
+    color: white;
+    font-weight: 600;
+}
+
+.tab-content {
+    display: none;
+}
+
+.tab-content.active {
+    display: block;
+}
+
+.inner-card {
+    background: white;
+    border-radius: 12px;
+    padding: 20px 25px;
+    margin-bottom: 25px;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.07);
+}
+
+.section-title {
+    font-size: 16px;
+    font-weight: 600;
+    margin-bottom: 18px;
+}
+
+.profile-header {
+    text-align: center;
+    padding: 20px 0;
+}
+
+.photo-circle {
+    width: 110px;
+    height: 110px;
+    border-radius: 50%;
+    background: #e6e8f0;
+    margin: 0 auto 15px;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.photo-circle img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.student-name {
+    font-size: 20px;
+    font-weight: 700;
+    color: #1a1f3a;
+}
+
+.student-course {
+    color: #555;
+    font-size: 14px;
+}
+
+.student-year-badge {
+    margin-top: 10px;
+    display: inline-block;
+    background: #1e40af;
+    color: white;
+    padding: 5px 12px;
+    border-radius: 10px;
+    font-size: 13px;
+}
+
+.input-grid {
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    gap: 20px;
+}
+
+.input-group {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+.input-group.full {
+    grid-column: span 2;
+}
+
+.input-group label {
+    font-size: 13px;
+    font-weight: 600;
+    color: #333;
+}
+
+.input-group input {
+    padding: 12px;
+    border-radius: 8px;
+    border: 1px solid #cbd5e1;
+    font-size: 14px;
+    color: #444;
+    background: #f8fafc;
+}
+
+.input-with-icon {
+    position: relative;
+}
+
+.input-with-icon .icon {
+    position: absolute;
+    left: 12px;
+    top: 50%;
+    transform: translateY(-50%);
+    opacity: 0.5;
+}
+
+.input-with-icon input {
+    padding-left: 38px;
+}
+
+/* Remove icons ONLY in the Profile Page (email, birthday, phone icons) */
+#profile-page .input-with-icon .icon {
+    display: none !important;
+}
+
+.
+/* Maintain input alignment so layout does NOT shift */
+#profile-page .input-with-icon input {
+    padding-left: 12px !important; /* Removes icon spacing */
+}
+
+#security .section-title {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+
+#security .submit-btn {
+    margin-top: 20px;     /* Add spacing above button */
+    width: fit-content;   /* Keeps button size clean */
+    padding: 10px 22px;   /* Better, balanced shape */
+}
 
         .class-title {
             font-size: 13px;
@@ -974,20 +1262,132 @@
             color: #718096;
         }
 
-        @media (max-width: 1024px) {
-            .weekly-schedule {
-                grid-template-columns: repeat(3, 1fr);
-            }
-        }
+        /* Large desktops */
+@media (min-width: 1200px) {
+    .dashboard-grid {
+        grid-template-columns: 2fr 1fr;
+    }
+    .stats-grid {
+        grid-template-columns: 1fr;
+    }
+}
 
-        @media (max-width: 768px) {
-            .weekly-schedule {
-                grid-template-columns: repeat(2, 1fr);
-            }
-        }
+/* Tablets & laptops */
+@media (max-width: 1199px) {
+    .dashboard-grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+    .stats-grid {
+        grid-template-columns: 1fr 1fr;
+        gap: 15px;
+    }
+    .weekly-schedule {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 15px;
+    }
+    .sidebar {
+        width: 200px;
+    }
+}
+
+/* Small tablets & large phones */
+@media (max-width: 1024px) {
+    .sidebar {
+        width: 60px;
+        padding: 10px 0;
+        border-radius: 0;
+    }
+    .logo-text, .nav-item span {
+        display: none;
+    }
+    .nav-item {
+        justify-content: center;
+        margin: 4px 0;
+    }
+    .nav-item.active {
+        box-shadow: none;
+    }
+    .weekly-schedule {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+/* Phones */
+@media (max-width: 768px) {
+    .main-content {
+        padding: 15px;
+    }
+    .dashboard-grid {
+        grid-template-columns: 1fr;
+        gap: 15px;
+    }
+    .stats-grid {
+        grid-template-columns: 1fr;
+        gap: 12px;
+    }
+    .input-grid {
+        grid-template-columns: 1fr;
+        gap: 15px;
+    }
+    .submit-section {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    .submit-btn {
+        width: 100%;
+    }
+    .avatar {
+        width: 80px;
+        height: 80px;
+    }
+    .photo-circle {
+        width: 90px;
+        height: 90px;
+    }
+    table, thead, tbody, th, td, tr {
+        display: block;
+        width: 100%;
+    }
+    thead {
+        display: none;
+    }
+    tbody tr {
+        margin-bottom: 15px;
+        box-shadow: 0 4px 16px rgba(0,0,0,0.08);
+        border-radius: 12px;
+        padding: 12px;
+    }
+    tbody td {
+        padding: 8px 10px;
+        display: flex;
+        justify-content: space-between;
+        font-size: 13px;
+    }
+    tbody td::before {
+        content: attr(data-label);
+        font-weight: 600;
+        color: #555;
+    }
+}
     </style>
 
     <script>
+
+        // Tabs: Profile / Security
+const tabButtons = document.querySelectorAll(".tab-btn");
+const tabContents = document.querySelectorAll(".tab-content");
+
+tabButtons.forEach(btn => {
+    btn.addEventListener("click", () => {
+        tabButtons.forEach(b => b.classList.remove("active"));
+        tabContents.forEach(c => c.classList.remove("active"));
+
+        btn.classList.add("active");
+        document.getElementById(btn.dataset.tab).classList.add("active");
+    });
+});
+
 
    function setupSelectAll(selectAllId, tableSelector) {
     const selectAllCheckbox = document.getElementById(selectAllId);
@@ -1064,12 +1464,15 @@ updateTotalUnits();
                 const page = this.getAttribute('data-page');
                 
                 // Handle logout
-                if (page === 'logout') {
-                    if (confirm('Are you sure you want to logout?')) {
-                        alert('Logging out...');
-                    }
-                    return;
-                }
+                // Handle logout
+if (page === 'logout') {
+    if (confirm('Are you sure you want to logout?')) {
+        // Redirect to mainpage.html
+        window.location.href = 'mainpage.html';
+    }
+    return;
+}
+
                 
                 // Remove active class from all nav items
                 navItems.forEach(nav => nav.classList.remove('active'));
