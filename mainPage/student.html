@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="admin.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PLM Portal</title>
+    <link rel="preload" href="student/background.svg" as="image">
+</head>
+<body>
+    <div class="background"></div>
+
+    <div class="container">
+        <div class="left-section">
+            <div class="logo">
+                <img src="student/plm.svg" alt="PLM Logo">
+            </div>
+            <div class="welcome-text">
+                Welcome to<br>PLM Portal
+            </div>
+        </div>
+
+        <div class="login-card">
+            <a class="back-button" onclick="BackButton(); return false;">
+                <svg class="back-arrow" viewBox="0 0 14 10" fill="none">
+                    <path d="M1 5H13M1 5L5 1M1 5L5 9" stroke="#171717" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+                Back
+            </a>
+
+            <div class="form-group">
+                <label class="form-label" for="username">Student Number</label>
+                <input type="text" id="username" class="form-input" placeholder="202012345">
+            </div>
+
+            <div class="form-group">
+                <label class="form-label" for="password">Password</label>
+                <div class="password-wrapper">
+                    <input type="password" id="password" class="form-input" placeholder="••••••••••">
+                    <img id="eye-icon" class="toggle-password" onclick="togglePassword()" src="student/passOn.svg" alt="Toggle password visibility">
+                </div>
+            </div>
+
+            <button class="login-button" onclick="handleLogin()">Log in</button>
+
+            <div class="form-footer">
+                <label class="remember-me">
+                    <input type="checkbox" id="remember">
+                    <span>Remember me</span>
+                </label>
+                <a href="#" class="forgot-password" onclick="forgotPassword(); return false;">Forgot Password</a>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function togglePassword() {
+            const passwordInput = document.getElementById('password');
+            const eyeIcon = document.getElementById('eye-icon');
+            
+            if (passwordInput.type === 'password') {
+                passwordInput.type = 'text';
+                eyeIcon.src = 'student/passOff.svg'; // Password visible
+            } else {
+                passwordInput.type = 'password';
+                eyeIcon.src = 'student/passOn.svg'; // Password hidden
+            }
+        }
+
+                // Load saved username on page load
+        window.addEventListener('DOMContentLoaded', function() {
+            const savedUsername = getCookie('rememberedUsername');
+            if (savedUsername) {
+                document.getElementById('username').value = savedUsername;
+                document.getElementById('remember').checked = true;
+            }
+        });
+
+        function setCookie(name, value, days) {
+            const expires = new Date();
+            expires.setTime(expires.getTime() + (days * 24 * 60 * 60 * 1000));
+            document.cookie = name + '=' + value + ';expires=' + expires.toUTCString() + ';path=/';
+        }
+
+        function getCookie(name) {
+            const nameEQ = name + '=';
+            const ca = document.cookie.split(';');
+            for (let i = 0; i < ca.length; i++) {
+                let c = ca[i];
+                while (c.charAt(0) === ' ') c = c.substring(1, c.length);
+                if (c.indexOf(nameEQ) === 0) return c.substring(nameEQ.length, c.length);
+            }
+            return null;
+        }
+
+        function deleteCookie(name) {
+            document.cookie = name + '=;expires=Thu, 01 Jan 1970 00:00:01 GMT;path=/';
+        }
+
+        // Then in your login function:
+        function handleLogin() {
+            if (!validateStudentNumber()) {
+                return; // Stop if validation fails
+            }
+
+            const username = document.getElementById('username').value;
+            const password = document.getElementById('password').value;
+            const rememberMe = document.getElementById('remember').checked;
+            
+            if (username && password) {
+                // Sample accounts (replace with real authentication later)
+                const validAccounts = {
+                    '2021100001': 'student123',
+                    '2021100002': 'password456',
+                    '2022100001': 'plmstudent'
+                };
+                
+                // Check if username exists and password matches
+                if (validAccounts[username] && validAccounts[username] === password) {
+                    // Handle remember me functionality
+                    if (rememberMe) {
+                        setCookie('rememberedUsername', username, 30);
+                    } else {
+                        deleteCookie('rememberedUsername');
+                    }
+                    // Uncomment the line below to redirect after login:
+                    window.location.href = 'studentdashboard.html';
+                } else {
+                    alert('Invalid student number or password!');
+                }
+            } else {
+                alert('Please enter both student number and password');
+            }
+        }
+
+        function validateStudentNumber() {
+            const studentNumber = document.getElementById('username').value;
+            
+            // Only check format if there's input
+            if (studentNumber.length > 0 && !/^\d+$/.test(studentNumber)) {
+                alert('Student number must contain only numbers!');
+                return false;
+            }
+            
+            return true;
+        }
+
+        function BackButton() {
+            window.location.href = 'mainpage.html';
+        }
+
+        function forgotPassword() {
+            alert('Please contact icto@plm.edu.ph to reset your password.');
+        }
+
+        document.getElementById('password').addEventListener('keypress', function(e) {
+            if (e.key === 'Enter') {
+                handleLogin();
+            }
+        });
+    </script>
+</body>
+</html>
