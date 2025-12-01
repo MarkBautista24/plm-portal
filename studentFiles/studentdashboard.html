@@ -1,26 +1,26 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <link rel="stylesheet" href="sdashboard.css">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Student Dashboard</title>
+
     <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
 </head>
 <body>
     <div class="sidebar">
         <div class="logo-section">
             <div class="logo-icon">
-                <img src="sdashboard/plm.svg" alt="Logo">
-            </div>
+    <img src="Logo.png" alt="Logo" style="width: 100%; height: 100%; object-fit: contain;">
+</div>
             <div class="logo-text">
-                Pamantasan ng<br>
+                <strong>Pamantasan ng<br>
                 Lungsod ng Maynila
+                </strong>
             </div>
         </div>
-        
         <div class="nav-menu">
             <a href="#" class="nav-item active" data-page="dashboard">
                 <svg fill="none" stroke="currentColor" viewBox="0 0 24 24" class="nav-icon">
@@ -47,7 +47,6 @@
                 <span>Profile</span>
             </a>
         </div>
-        
         <div class="logout-section">
             <a href="#" class="nav-item" data-page="logout">
                 <svg fill="none" stroke="currentColor" viewBox="0 0 24 24" class="nav-icon">
@@ -88,100 +87,127 @@
                             </div>
                         </div>
                     </div>
-                    <div class="avatar">
-                        <img src="sdashboard/profile.jpg" alt="Profile Picture">
-                    </div>
+                   <div class="avatar">
+    			<img src="profile.jpg" alt="Profile Picture">
+				</div>
+
                 </div>
             </div>
 
             <div class="dashboard-grid">
-                <!-- Enrolled Courses Card Layout -->
-                <div class="card enrolled-courses-card">
-                    <div class="enrolled-header">
-                        <h2>Enrolled Courses</h2>
-                        <div class="course-count">
-                            <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"/>
-                            </svg>
-                            8
-                        </div>
+                <div class="card">
+                    <div class="card-header">
+                        <h2>Course Schedule</h2>
                     </div>
+			                   <table>
+			    <thead>
+			        <tr>
+			            <th>Course</th>
+			            <th>Code</th>
+			            <th>Lec</th>
+			            <th>Lab</th>
+			            <th>Units</th>
+			            <th>Schedule</th>
+			            <th>Room</th>
+			            <th>Section</th>
+			            <th>Status</th>
+			        </tr>
+			    </thead>
+			    <tbody>
+			        <tr>
+			            <td>Object Oriented Programming</td>
+			            <td>CSC 0212</td>
+			            <td>2</td>
+			            <td>0</td>
+			            <td>3</td>
+			            <td>Mon 10:00AM-12:00PM</td>
+			            <td>GCA 309</td>
+			            <td>BSCS 2-3</td>
+			            <td class="status active">Active</td>
+			        </tr>
+			        <tr>
+			            <td>Logic Design and Digital Computer Circuits</td>
+			            <td>CSC 0213</td>
+			            <td>0</td>
+			            <td>3</td>
+			            <td>3</td>
+			            <td>Tue 1:00PM-4:00PM</td>
+			            <td>GCA 310</td>
+			            <td>BSCS 2-3</td>
+			            <td class="status active">Active</td>
+			        </tr>
+			        <tr>
+			            <td>Operation Research</td>
+			            <td>CSC 0224</td>
+			            <td>2</td>
+			            <td>0</td>
+			            <td>3</td>
+			            <td>Wed 8:00AM-10:00AM</td>
+			            <td>GCA 311</td>
+			            <td>BSCS 2-3</td>
+			            <td class="status inactive">Inactive</td>
+			        </tr>
+			        <tr>
+			            <td>Ethics</td>
+			            <td>ETH 0008</td>
+			            <td>0</td>
+			            <td>3</td>
+			            <td>3</td>
+			            <td>Thu 9:00AM-12:00PM</td>
+			            <td>GCA 312</td>
+			            <td>BSCS 2-3</td>
+			            <td class="status active">Active</td>
+			        </tr>
+			        <tr>
+			            <td>Information Management</td>
+			            <td>ICC 0105</td>
+			            <td>3</td>
+			            <td>0</td>
+			            <td>3</td>
+			            <td>Fri 10:00AM-1:00PM</td>
+			            <td>GCA 313</td>
+			            <td>BSCS 2-3</td>
+			            <td class="status inactive">Inactive</td>
+			        </tr>
+			        <tr>
+			            <td>Living in the IT Era</td>
+			            <td>ITE 0001</td>
+			            <td>3</td>
+			            <td>0</td>
+			            <td>3</td>
+			            <td>Mon 1:00PM-4:00PM</td>
+			            <td>GCA 314</td>
+			            <td>BSCS 2-3</td>
+			            <td class="status active">Active</td>
+			        </tr>
+			        <tr>
+			            <td>Understanding the Self</td>
+			            <td>UTS 0003</td>
+			            <td>3</td>
+			            <td>0</td>
+			            <td>3</td>
+			            <td>Tue 10:00AM-1:00PM</td>
+			            <td>GCA 315</td>
+			            <td>BSCS 2-3</td>
+			            <td class="status active">Active</td>
+			        </tr>
+			        <tr>
+			            <td>Group Games</td>
+			            <td>PATHFIT 306</td>
+			            <td>2</td>
+			            <td>0</td>
+			            <td>3</td>
+			            <td>Wed 1:00PM-3:00PM</td>
+			            <td>GCA 316</td>
+			            <td>BSCS 2-3</td>
+			            <td class="status inactive">Inactive</td>
+			        </tr>
+			    </tbody>
+			</table>
 
-                    <div class="courses-grid" id="courses-grid">
-                        <div class="course-card">
-                            <span class="status-indicator status-red"></span>
-                            <div class="course-code">CSC 0212</div>
-                            <div class="course-title">Object Oriented Programming</div>
-                            <div class="course-instructor">Joel Cruz</div>
-                            <div class="course-details">Monday 10:00AM-12:00PM · GCA 309</div>
-                        </div>
-
-                        <div class="course-card">
-                            <span class="status-indicator status-orange"></span>
-                            <div class="course-code">ICC 0105</div>
-                            <div class="course-title">Information Management</div>
-                            <div class="course-instructor">Francis Atienza</div>
-                            <div class="course-details">Friday 10:00AM-1:00PM · GCA 313</div>
-                        </div>
-
-                        <div class="course-card">
-                            <span class="status-indicator status-yellow"></span>
-                            <div class="course-code">CSC 0213</div>
-                            <div class="course-title">Logic Design and Digital Computer Circuits</div>
-                            <div class="course-instructor">Elsa Pascual</div>
-                            <div class="course-details">Tuesday 1:00PM-4:00PM · GCA 310</div>
-                        </div>
-
-                        <div class="course-card">
-                            <span class="status-indicator status-green"></span>
-                            <div class="course-code">CSC 0224</div>
-                            <div class="course-title">Operation Research</div>
-                            <div class="course-instructor">Shiela Demegillo</div>
-                            <div class="course-details">Wednesday 8:00AM-10:00AM · GCA 311</div>
-                        </div>
-
-                        <div class="course-card hidden-course">
-                            <span class="status-indicator status-cyan"></span>
-                            <div class="course-code">ITE 0001</div>
-                            <div class="course-title">Living in the IT Era</div>
-                            <div class="course-instructor">Vivien Agustin</div>
-                            <div class="course-details">Monday 1:00PM-4:00PM · GCA 314</div>
-                        </div>
-
-                        <div class="course-card hidden-course">
-                            <span class="status-indicator status-cyan"></span>
-                            <div class="course-code">UTS 0003</div>
-                            <div class="course-title">Understanding the Self</div>
-                            <div class="course-instructor">Sarah Macarareg</div>
-                            <div class="course-details">Tuesday 10:00AM-1:00PM · GCA 315</div>
-                        </div>
-
-                        <div class="course-card hidden-course">
-                            <span class="status-indicator status-blue"></span>
-                            <div class="course-code">ETH 0008</div>
-                            <div class="course-title">Ethics</div>
-                            <div class="course-instructor">Julius Jose</div>
-                            <div class="course-details">Thursday 9:00AM-12:00PM · GCA 312</div>
-                        </div>
-
-                        <div class="course-card hidden-course">
-                            <span class="status-indicator status-purple"></span>
-                            <div class="course-code">PATHFIT 306</div>
-                            <div class="course-title">Group Games</div>
-                            <div class="course-instructor">Joseph Toldoya</div>
-                            <div class="course-details">Wednesday 1:00PM-3:00PM · GCA 316</div>
-                        </div>
-                    </div>
-
-                    <button class="view-more-btn" id="view-more-btn">
-                        <span id="view-more-text">View More</span>
-                        <svg id="view-more-icon" width="16" height="16" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
-                        </svg>
-                    </button>
                 </div>
 
-                <div class="card progress-card">
+                <div class="card">
                     <div class="card-header">
                         <h2>Overall Student Progress</h2>
                     </div>
@@ -205,16 +231,16 @@
                     </div>
                     <div class="progress-container">
                         <div class="progress-circle">
-                            <svg width="180" height="180" viewBox="0 0 180 180">
+                            <svg width="220" height="220" viewBox="0 0 220 220">
                                 <defs>
                                     <linearGradient id="gradient" x1="0%" y1="0%" x2="100%" y2="100%">
                                         <stop offset="0%" style="stop-color:#1947FF;stop-opacity:1" />
                                         <stop offset="100%" style="stop-color:#1947FF;stop-opacity:1" />
                                     </linearGradient>
                                 </defs>
-                                <circle class="circle-bg" cx="90" cy="90" r="75" />
-                                <circle class="circle-progress" cx="90" cy="90" r="75" 
-                                        stroke-dasharray="471" stroke-dashoffset="0" />
+                                <circle class="circle-bg" cx="110" cy="110" r="90" />
+                                <circle class="circle-progress" cx="110" cy="110" r="90" 
+                                        stroke-dasharray="565" stroke-dashoffset="0" />
                             </svg>
                             <div class="progress-text">
                                 <div class="progress-percentage">100%</div>
@@ -228,119 +254,235 @@
             </div>
         </div>
 
+        <!-- Profile Page -->
+<div id="profile-page" class="page-content">
+    <div class="card">
+        <div class="card-header">
+            <h2>Profile</h2>
+        </div>
+
+        <!-- Tabs -->
+        <div class="profile-tabs">
+            <button class="tab-btn active" data-tab="profile-info">Profile</button>
+            <button class="tab-btn" data-tab="security">Security</button>
+        </div>
+
+        <!-- Student Profile Card -->
+        <div id="profile-info" class="tab-content active">
+            <div class="inner-card">
+                <h3 class="section-title">Student Profile</h3>
+
+                <div class="profile-header">
+                    <div class="profile-photo">
+                        <div class="photo-circle">
+                            <img src="profile.jpg" alt="Profile">
+                        </div>
+                    </div>
+
+                    <div class="profile-basic-info">
+                        <h2 class="student-name">Juan Dela Cruz</h2>
+                        <p class="student-course">BS Computer Science</p>
+                        <span class="student-year-badge">Year 2 • 202012345</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Personal Information Card -->
+            <div class="inner-card">
+                <h3 class="section-title">Personal Information</h3>
+
+                <div class="input-grid">
+                    <div class="input-group">
+                        <label>First Name</label>
+                        <input type="text" value="Juan" readonly>
+                    </div>
+
+                    <div class="input-group">
+                        <label>Middle Name</label>
+                        <input type="text" value="N/A" readonly>
+                    </div>
+
+                    <div class="input-group">
+                        <label>Last Name</label>
+                        <input type="text" value="Dela Cruz" readonly>
+                    </div>
+
+                    <div class="input-group full">
+                        <label>Email Address</label>
+                        <div class="input-with-icon">
+                            <span class="icon">📧</span>
+                            <input type="email" value="juandelacruz@gmail.com" readonly>
+                        </div>
+                    </div>
+
+                    <div class="input-group">
+                        <label>Date of Birth</label>
+                        <div class="input-with-icon">
+                            <span class="icon">📅</span>
+                            <input type="text" value="01/01/1999" readonly>
+                        </div>
+                    </div>
+
+                    <div class="input-group">
+                        <label>Phone Number</label>
+                        <div class="input-with-icon">
+                            <span class="icon">📞</span>
+                            <input type="text" value="+63 09991234567" readonly>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Security Tab -->
+        <div id="security" class="tab-content">
+            <div class="inner-card">
+                <h3 class="section-title">
+    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" 
+         stroke="#1e3a8a" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+         style="margin-right: 6px;">
+        <path d="M12 1l8 4v6c0 5.25-3.5 10-8 12-4.5-2-8-6.75-8-12V5l8-4z"></path>
+        <path d="M9 12l2 2 4-4"></path>
+    </svg>
+    Security Settings
+</h3>
+
+
+                <div class="input-grid">
+                    <div class="input-group full">
+                        <label>Current Password</label>
+                        <input type="password" placeholder="Enter current password">
+                    </div>
+
+                    <div class="input-group full">
+                        <label>New Password</label>
+                        <input type="password" placeholder="Enter new password">
+                    </div>
+
+                    <div class="input-group full">
+                        <label>Confirm New Password</label>
+                        <input type="password" placeholder="Confirm new password">
+                    </div>
+                </div>
+
+                <button class="submit-btn">Update Password</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+
         <!-- Schedule Page -->
         <div id="schedule-page" class="page-content">
             <div class="card">
                 <div class="card-header">
                     <h2>Course Schedule</h2>
                 </div>
-                <div class="table-wrapper">
-                    <table>
-                        <thead>
-                            <tr>
-                                <th>Course</th>
-                                <th>Code</th>
-                                <th>Lec</th>
-                                <th>Lab</th>
-                                <th>Units</th>
-                                <th>Schedule</th>
-                                <th>Room</th>
-                                <th>Section</th>
-                                <th>Status</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr>
-                                <td>Object Oriented Programming</td>
-                                <td>CSC 0212</td>
-                                <td>2</td>
-                                <td>0</td>
-                                <td>3</td>
-                                <td>Mon 10:00AM-12:00PM</td>
-                                <td>GCA 309</td>
-                                <td>BSCS 2-3</td>
-                                <td class="status active">Active</td>
-                            </tr>
-                            <tr>
-                                <td>Logic Design and Digital Computer Circuits</td>
-                                <td>CSC 0213</td>
-                                <td>0</td>
-                                <td>3</td>
-                                <td>3</td>
-                                <td>Tue 1:00PM-4:00PM</td>
-                                <td>GCA 310</td>
-                                <td>BSCS 2-3</td>
-                                <td class="status active">Active</td>
-                            </tr>
-                            <tr>
-                                <td>Operation Research</td>
-                                <td>CSC 0224</td>
-                                <td>2</td>
-                                <td>0</td>
-                                <td>3</td>
-                                <td>Wed 8:00AM-10:00AM</td>
-                                <td>GCA 311</td>
-                                <td>BSCS 2-3</td>
-                                <td class="status inactive">Inactive</td>
-                            </tr>
-                            <tr>
-                                <td>Ethics</td>
-                                <td>ETH 0008</td>
-                                <td>0</td>
-                                <td>3</td>
-                                <td>3</td>
-                                <td>Thu 9:00AM-12:00PM</td>
-                                <td>GCA 312</td>
-                                <td>BSCS 2-3</td>
-                                <td class="status active">Active</td>
-                            </tr>
-                            <tr>
-                                <td>Information Management</td>
-                                <td>ICC 0105</td>
-                                <td>3</td>
-                                <td>0</td>
-                                <td>3</td>
-                                <td>Fri 10:00AM-1:00PM</td>
-                                <td>GCA 313</td>
-                                <td>BSCS 2-3</td>
-                                <td class="status inactive">Inactive</td>
-                            </tr>
-                            <tr>
-                                <td>Living in the IT Era</td>
-                                <td>ITE 0001</td>
-                                <td>3</td>
-                                <td>0</td>
-                                <td>3</td>
-                                <td>Mon 1:00PM-4:00PM</td>
-                                <td>GCA 314</td>
-                                <td>BSCS 2-3</td>
-                                <td class="status active">Active</td>
-                            </tr>
-                            <tr>
-                                <td>Understanding the Self</td>
-                                <td>UTS 0003</td>
-                                <td>3</td>
-                                <td>0</td>
-                                <td>3</td>
-                                <td>Tue 10:00AM-1:00PM</td>
-                                <td>GCA 315</td>
-                                <td>BSCS 2-3</td>
-                                <td class="status active">Active</td>
-                            </tr>
-                            <tr>
-                                <td>Group Games</td>
-                                <td>PATHFIT 306</td>
-                                <td>2</td>
-                                <td>0</td>
-                                <td>3</td>
-                                <td>Wed 1:00PM-3:00PM</td>
-                                <td>GCA 316</td>
-                                <td>BSCS 2-3</td>
-                                <td class="status inactive">Inactive</td>
-                            </tr>
-                        </tbody>
-                    </table>
-                </div>
+                           <table>
+			    <thead>
+			        <tr>
+			            <th>Course</th>
+			            <th>Code</th>
+			            <th>Lec</th>
+			            <th>Lab</th>
+			            <th>Units</th>
+			            <th>Schedule</th>
+			            <th>Room</th>
+			            <th>Section</th>
+			            <th>Status</th>
+			        </tr>
+			    </thead>
+			    <tbody>
+			        <tr>
+			            <td>Object Oriented Programming</td>
+			            <td>CSC 0212</td>
+			            <td>2</td>
+			            <td>0</td>
+			            <td>3</td>
+			            <td>Mon 10:00AM-12:00PM</td>
+			            <td>GCA 309</td>
+			            <td>BSCS 2-3</td>
+			            <td class="status active">Active</td>
+			        </tr>
+			        <tr>
+			            <td>Logic Design and Digital Computer Circuits</td>
+			            <td>CSC 0213</td>
+			            <td>0</td>
+			            <td>3</td>
+			            <td>3</td>
+			            <td>Tue 1:00PM-4:00PM</td>
+			            <td>GCA 310</td>
+			            <td>BSCS 2-3</td>
+			            <td class="status active">Active</td>
+			        </tr>
+			        <tr>
+			            <td>Operation Research</td>
+			            <td>CSC 0224</td>
+			            <td>2</td>
+			            <td>0</td>
+			            <td>3</td>
+			            <td>Wed 8:00AM-10:00AM</td>
+			            <td>GCA 311</td>
+			            <td>BSCS 2-3</td>
+			            <td class="status inactive">Inactive</td>
+			        </tr>
+			        <tr>
+			            <td>Ethics</td>
+			            <td>ETH 0008</td>
+			            <td>0</td>
+			            <td>3</td>
+			            <td>3</td>
+			            <td>Thu 9:00AM-12:00PM</td>
+			            <td>GCA 312</td>
+			            <td>BSCS 2-3</td>
+			            <td class="status active">Active</td>
+			        </tr>
+			        <tr>
+			            <td>Information Management</td>
+			            <td>ICC 0105</td>
+			            <td>3</td>
+			            <td>0</td>
+			            <td>3</td>
+			            <td>Fri 10:00AM-1:00PM</td>
+			            <td>GCA 313</td>
+			            <td>BSCS 2-3</td>
+			            <td class="status inactive">Inactive</td>
+			        </tr>
+			        <tr>
+			            <td>Living in the IT Era</td>
+			            <td>ITE 0001</td>
+			            <td>3</td>
+			            <td>0</td>
+			            <td>3</td>
+			            <td>Mon 1:00PM-4:00PM</td>
+			            <td>GCA 314</td>
+			            <td>BSCS 2-3</td>
+			            <td class="status active">Active</td>
+			        </tr>
+			        <tr>
+			            <td>Understanding the Self</td>
+			            <td>UTS 0003</td>
+			            <td>3</td>
+			            <td>0</td>
+			            <td>3</td>
+			            <td>Tue 10:00AM-1:00PM</td>
+			            <td>GCA 315</td>
+			            <td>BSCS 2-3</td>
+			            <td class="status active">Active</td>
+			        </tr>
+			        <tr>
+			            <td>Group Games</td>
+			            <td>PATHFIT 306</td>
+			            <td>2</td>
+			            <td>0</td>
+			            <td>3</td>
+			            <td>Wed 1:00PM-3:00PM</td>
+			            <td>GCA 316</td>
+			            <td>BSCS 2-3</td>
+			            <td class="status inactive">Inactive</td>
+			        </tr>
+			    </tbody>
+			</table>
             </div>
 
             <div class="card">
@@ -355,147 +497,153 @@
                             <div class="class-details">10:00AM-12:00PM - GCA 309</div>
                         </div>
                         <div class="class-card">
-                            <div class="class-title">Living in the IT Era</div>
-                            <div class="class-details">1:00PM-4:00PM - GCA 314</div>
+                            <div class="class-title">Logic Design and Digital Circuits</div>
+                            <div class="class-details">10:00AM-12:00PM - GCA 309</div>
                         </div>
                     </div>
                     
                     <div class="day-column">
                         <h3>Tuesday</h3>
                         <div class="class-card">
-                            <div class="class-title">Logic Design and Digital Circuits</div>
-                            <div class="class-details">1:00PM-4:00PM - GCA 310</div>
+                            <div class="class-title">Operation Research</div>
+                            <div class="class-details">10:00AM-12:00PM - GCA 309</div>
                         </div>
                         <div class="class-card">
-                            <div class="class-title">Understanding the Self</div>
-                            <div class="class-details">10:00AM-1:00PM - GCA 315</div>
+                            <div class="class-title">Ethics</div>
+                            <div class="class-details">10:00AM-12:00PM - GCA 309</div>
                         </div>
                     </div>
                     
                     <div class="day-column">
                         <h3>Wednesday</h3>
                         <div class="class-card">
-                            <div class="class-title">Operation Research</div>
-                            <div class="class-details">8:00AM-10:00AM - GCA 311</div>
-                        </div>
-                        <div class="class-card">
-                            <div class="class-title">Group Games</div>
-                            <div class="class-details">1:00PM-3:00PM - GCA 316</div>
+                            <div class="class-title">Living in the IT Era</div>
+                            <div class="class-details">10:00AM-12:00PM - GCA 309</div>
                         </div>
                     </div>
                     
                     <div class="day-column">
                         <h3>Thursday</h3>
                         <div class="class-card">
-                            <div class="class-title">Ethics</div>
-                            <div class="class-details">9:00AM-12:00PM - GCA 312</div>
+                            <div class="class-title">Information Management</div>
+                            <div class="class-details">10:00AM-12:00PM - GCA 309</div>
                         </div>
                     </div>
                     
                     <div class="day-column">
                         <h3>Friday</h3>
                         <div class="class-card">
-                            <div class="class-title">Information Management</div>
-                            <div class="class-details">10:00AM-1:00PM - GCA 313</div>
+                            <div class="class-title">Understanding the Self</div>
+                            <div class="class-details">10:00AM-12:00PM - GCA 309</div>
+                        </div>
+                        <div class="class-card">
+                            <div class="class-title">Group Games</div>
+                            <div class="class-details">10:00AM-12:00PM - GCA 309</div>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
 
-        <!-- Enrollment Page -->
-        <div id="enrollment-page" class="page-content">
-            <div class="card">
-                <div class="card-header">
-                    <h2>Course Registration</h2>
-                    <p>Courses to register for the current semester</p>
-                </div>
-                <table class="registration-table">
-                    <thead>
-                        <tr>
-                            <th></th>
-                            <th>Course</th>
-                            <th>Code</th>
-                            <th>Units</th>
-                            <th>Schedule</th>
-                            <th>Room</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td><input type="checkbox" id="course-1" name="course-1"></td>
-                            <td>Object Oriented Programming</td>
-                            <td>CSC 0212</td>
-                            <td>3</td>
-                            <td>Mon 10:00AM-12:00PM</td>
-                            <td>GCA 309</td>
-                        </tr>
-                        <tr>
-                            <td><input type="checkbox" id="course-2" name="course-2"></td>
-                            <td>Logic Design and Digital Computer Circuits</td>
-                            <td>CSC 0213</td>
-                            <td>3</td>
-                            <td>Tue 1:00PM-4:00PM</td>
-                            <td>GCA 310</td>
-                        </tr>
-                        <tr>
-                            <td><input type="checkbox" id="course-3" name="course-3"></td>
-                            <td>Operation Research</td>
-                            <td>CSC 0224</td>
-                            <td>3</td>
-                            <td>Wed 8:00AM-10:00AM</td>
-                            <td>GCA 311</td>
-                        </tr>
-                        <tr>
-                            <td><input type="checkbox" id="course-4" name="course-4"></td>
-                            <td>Ethics</td>
-                            <td>ETH 0008</td>
-                            <td>3</td>
-                            <td>Thu 9:00AM-12:00PM</td>
-                            <td>GCA 312</td>
-                        </tr>
-                        <tr>
-                            <td><input type="checkbox" id="course-5" name="course-5"></td>
-                            <td>Information Management</td>
-                            <td>ICC 0105</td>
-                            <td>3</td>
-                            <td>Fri 10:00AM-1:00PM</td>
-                            <td>GCA 313</td>
-                        </tr>
-                        <tr>
-                            <td><input type="checkbox" id="course-6" name="course-6"></td>
-                            <td>Living in the IT Era</td>
-                            <td>ITE 0001</td>
-                            <td>3</td>
-                            <td>Mon 1:00PM-4:00PM</td>
-                            <td>GCA 314</td>
-                        </tr>
-                        <tr>
-                            <td><input type="checkbox" id="course-7" name="course-7"></td>
-                            <td>Understanding the Self</td>
-                            <td>UTS 0003</td>
-                            <td>3</td>
-                            <td>Tue 10:00AM-1:00PM</td>
-                            <td>GCA 315</td>
-                        </tr>
-                        <tr>
-                            <td><input type="checkbox" id="course-8" name="course-8"></td>
-                            <td>Group Games</td>
-                            <td>PATHFIT 306</td>
-                            <td>3</td>
-                            <td>Wed 1:00PM-3:00PM</td>
-                            <td>GCA 316</td>
-                        </tr>
-                    </tbody>
-                </table>
-                
-                <div class="submit-section">
-                    <label><input type="checkbox" id="select-all-bottom"> Select All</label>
-                    <span id="total-units">Total Units: 0</span>
-                    <button class="submit-btn">Submit Registered Courses</button>
-                </div>
-            </div>
+        <!-- Registration Page -->
+<div id="enrollment-page" class="page-content">
+    <div class="card">
+        <div class="card-header">
+            <h2>Course Registration</h2>
+            <p>Courses to register for the current semester</p>
         </div>
+        <table class="registration-table">
+            <thead>
+                <tr>
+                    <th></th>
+                    <th>Course</th>
+                    <th>Code</th>
+                    <th>Units</th>
+                    <th>Schedule</th>
+                    <th>Room</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><input type="checkbox"></td>
+                    <td>Object Oriented Programming</td>
+                    <td>CSC 0212</td>
+                    <td>3</td>
+                    <td>Fri 10:00AM-12:00PM</td>
+                    <td>GCA 309</td>
+                </tr>
+                <tr>
+                    <td><input type="checkbox"></td>
+                    <td>Logic Design and Digital Computer Circuits</td>
+                    <td>CSC 0213</td>
+                    <td>3</td>
+                    <td>Fri 10:00AM-12:00PM</td>
+                    <td>GCA 309</td>
+                </tr>
+
+                <tr>
+                    <td><input type="checkbox"></td>
+                    <td>Operation Research</td>
+                    <td>CSC 0224</td>
+                    <td>3</td>
+                    <td>Fri 10:00AM-12:00PM</td>
+                    <td>GCA 309</td>
+                </tr>
+                <tr>
+                    <td><input type="checkbox"></td>
+                    <td>Ethics</td>
+                    <td>CSC 0008</td>
+                    <td>3</td>
+                    <td>Fri 10:00AM-12:00PM</td>
+                    <td>GCA 309</td>
+                </tr>
+                <tr>
+                    <td><input type="checkbox"></td>
+                    <td>Information Management</td>
+                    <td>ICC 0105</td>
+                    <td>3</td>
+                    <td>Fri 10:00AM-12:00PM</td>
+                    <td>GCA 309</td>
+                </tr>
+                <tr>
+                    <td><input type="checkbox"></td>
+                    <td>Living in the IT era</td>
+                    <td>ITE 0001</td>
+                    <td>3</td>
+                    <td>Fri 10:00AM-12:00PM</td>
+                    <td>GCA 309</td>
+                </tr>
+                <tr>
+                    <td><input type="checkbox"></td>
+                    <td>Understanding the Self</td>
+                    <td>UTS 0003</td>
+                    <td>3</td>
+                    <td>Fri 10:00AM-12:00PM</td>
+                    <td>GCA 309</td>
+                </tr>
+                <tr>
+                    <td><input type="checkbox"></td>
+                    <td>Group Games</td>
+                    <td>PATHFIT 306</td>
+                    <td>3</td>
+                    <td>Fri 10:00AM-12:00PM</td>
+                    <td>GCA 309</td>
+                </tr>
+                
+            </tbody>
+        </table>
+      <!-- Total Units span inside submit section -->
+<div class="submit-section">
+    <label><input type="checkbox" id="select-all-bottom"> Select All</label>
+    <span id="total-units">Total Units: 0</span>
+    <button class="submit-btn">Submit Registered Courses</button>
+</div>
+
+    </div>
+</div>
+
+
+    
 
         <!-- Profile Page -->
         <div id="profile-page" class="page-content">
@@ -508,78 +656,89 @@
         </div>
     </div>
 
-    <script>
-        // View More functionality for courses
-        const viewMoreBtn = document.getElementById('view-more-btn');
-        const viewMoreText = document.getElementById('view-more-text');
-        const viewMoreIcon = document.getElementById('view-more-icon');
-        let isExpanded = false;
+     <script>
 
-        console.log('View More Button:', viewMoreBtn);
+        // Tabs: Profile / Security
+const tabButtons = document.querySelectorAll(".tab-btn");
+const tabContents = document.querySelectorAll(".tab-content");
 
-        if (viewMoreBtn) {
-            viewMoreBtn.addEventListener('click', () => {
-                console.log('View More clicked, isExpanded:', isExpanded);
-                isExpanded = !isExpanded;
-                const hiddenCourses = document.querySelectorAll('.hidden-course');
-                console.log('Hidden courses found:', hiddenCourses.length);
-                
-                if (isExpanded) {
-                    hiddenCourses.forEach((course, index) => {
-                        console.log('Showing course', index);
-                        course.style.display = 'block';
-                    });
-                    viewMoreText.textContent = 'View Less';
-                    viewMoreIcon.style.transform = 'rotate(180deg)';
-                } else {
-                    hiddenCourses.forEach((course, index) => {
-                        console.log('Hiding course', index);
-                        course.style.display = 'none';
-                    });
-                    viewMoreText.textContent = 'View More';
-                    viewMoreIcon.style.transform = 'rotate(0deg)';
-                }
-            });
-        } else {
-            console.error('View More button not found!');
-        }
+tabButtons.forEach(btn => {
+    btn.addEventListener("click", () => {
+        tabButtons.forEach(b => b.classList.remove("active"));
+        tabContents.forEach(c => c.classList.remove("active"));
 
-        // Update total units function
-        function updateTotalUnits() {
-            const registrationTable = document.querySelector('.registration-table tbody');
-            const totalUnitsSpan = document.getElementById('total-units');
-            let total = 0;
-            
-            registrationTable.querySelectorAll('tr').forEach(row => {
-                const checkbox = row.querySelector('input[type="checkbox"]');
-                const units = parseInt(row.cells[3].textContent);
-                if (checkbox.checked) total += units;
-            });
-            
-            totalUnitsSpan.textContent = `Total Units: ${total}`;
-        }
+        btn.classList.add("active");
+        document.getElementById(btn.dataset.tab).classList.add("active");
+    });
+});
 
-        // Setup select all functionality
-        const selectAllCheckbox = document.getElementById('select-all-bottom');
-        const registrationTable = document.querySelector('.registration-table tbody');
-        const checkboxes = registrationTable.querySelectorAll('input[type="checkbox"]');
 
-        selectAllCheckbox.addEventListener('change', () => {
-            checkboxes.forEach(cb => cb.checked = selectAllCheckbox.checked);
+   function setupSelectAll(selectAllId, tableSelector) {
+    const selectAllCheckbox = document.getElementById(selectAllId);
+    const table = document.querySelector(tableSelector);
+    const checkboxes = table.querySelectorAll('tbody input[type="checkbox"]');
+
+    // When "Select All" is clicked
+    selectAllCheckbox.addEventListener('change', () => {
+        checkboxes.forEach(cb => {
+            cb.checked = selectAllCheckbox.checked;
+            cb.dispatchEvent(new Event('change')); // ✅ trigger change event
+        });
+    });
+
+    // If any individual checkbox is changed, update "Select All"
+    checkboxes.forEach(cb => {
+        cb.addEventListener('change', () => {
+            const allChecked = Array.from(checkboxes).every(c => c.checked);
+            selectAllCheckbox.checked = allChecked;
+
+            // Update total units
             updateTotalUnits();
         });
+    });
+}
 
-        checkboxes.forEach(cb => {
-            cb.addEventListener('change', () => {
-                selectAllCheckbox.checked = Array.from(checkboxes).every(c => c.checked);
-                updateTotalUnits();
-            });
-        });
+// Reference to table and total units span
+const registrationTable = document.querySelector('.registration-table tbody');
+const totalUnitsSpan = document.getElementById('total-units');
 
-        // Initialize total units on page load
+function updateTotalUnits() {
+    let total = 0;
+    registrationTable.querySelectorAll('tr').forEach(row => {
+        const checkbox = row.querySelector('input[type="checkbox"]');
+        const units = parseInt(row.cells[3].textContent); // 4th column = Units
+        if (checkbox.checked) total += units;
+    });
+    totalUnitsSpan.textContent = `Total Units: ${total}`;
+}
+
+// Setup "Select All"
+const selectAllCheckbox = document.getElementById('select-all-bottom');
+const checkboxes = registrationTable.querySelectorAll('input[type="checkbox"]');
+
+selectAllCheckbox.addEventListener('change', () => {
+    checkboxes.forEach(cb => cb.checked = selectAllCheckbox.checked);
+    updateTotalUnits(); // ✅ update total units after select all
+});
+
+checkboxes.forEach(cb => {
+    cb.addEventListener('change', () => {
+        // Update "Select All" checkbox status
+        selectAllCheckbox.checked = Array.from(checkboxes).every(c => c.checked);
         updateTotalUnits();
+    });
+});
 
-        // Navigation functionality
+// Initialize total units on page load
+updateTotalUnits();
+
+
+
+
+    // Initialize for your Registration table
+   
+    setupSelectAll('select-all-bottom', '.registration-table');
+        // Get all navigation items
         const navItems = document.querySelectorAll('.nav-item');
         
         navItems.forEach(item => {
@@ -589,12 +748,15 @@
                 const page = this.getAttribute('data-page');
                 
                 // Handle logout
-                if (page === 'logout') {
-                    if (confirm('Are you sure you want to logout?')) {
-                        window.location.href = 'student.html';
-                    }
-                    return;
-                }
+                // Handle logout
+if (page === 'logout') {
+    if (confirm('Are you sure you want to logout?')) {
+        // Redirect to mainpage.html
+        window.location.href = 'mainpage.html';
+    }
+    return;
+}
+
                 
                 // Remove active class from all nav items
                 navItems.forEach(nav => nav.classList.remove('active'));
