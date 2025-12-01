@@ -14,10 +14,10 @@
   
   Student Profile/Security
   
-  Admin Dashboard
+  Admin Dashboard ✅
   
-  Admin User
+  Admin User ✅
   
-  Admin Profile
+  Admin Profile ✅
   
-  Admin Profile 2
+  Admin Profile 2 ✅
